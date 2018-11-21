@@ -18,6 +18,12 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKeywords
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
+import com.common.utils.SetDesiredCapability
 
-CustomKeywords.'com.common.utils.SetDesiredCapability.ie'(null)
+List desiredCapabilities = []
+//desiredCapabilities.add("--start-maximized")
+//desiredCapabilities.add("--disable-infobars")
+CustomKeywords.'com.common.utils.SetDesiredCapability.ie'(desiredCapabilities)
+WebUI.navigateToUrl('https://katalon.com/')
+WebUI.closeBrowser()
 
